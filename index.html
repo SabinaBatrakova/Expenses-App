@@ -5,10 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expenses App</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
+    <div class="container">
+
+        <div class="js-popup popup">
+            <div class="js-popup__content popup__content">
+                <button class="js-popup__close-btn popup__close-btn"></button>
+                <div class="order__title">Новый лимит</div>
+                <div class="popup-input">
+                    <input class="input-limit" type="text" placeholder="руб.">
+                    <button class="js-btn-limit btn-limit">Задать лимит</button>
+                </div>
+            </div>
+        </div>
+
+        <h1>Приложение учета расходов</h1>
+
+        <div class="expanses-wrapper">
+
+            <div class="block">
+                <div class="money-input rub">
+                    <input class="js-expenses-input expenses-input" type="number" min="1">
+                </div>
+
+                <select id="category-list" class="category-list">
+                    <option hidden disabled selected value="Категория">Категория</option>
+                    <option value="Продукты">Продукты</option>
+                    <option value="Кафе">Кафе</option>
+                    <option value="Квартира">Квартира</option>
+                </select>
+            </div>
+
+            <button class="js-expenses-button expenses-button">Добавить</button>
+
+            <div class="block">
+                <div class="js-limit-icon limit">
+                    <p><span class="label">Лимит: </span>
+                        <span class="js-limit rub"></span>
+                    </p>
+                </div>
+                <div class="sum">
+                    <p><span class="label">Сумма:</span>
+                        <span class="js-sum sum"></span> руб.
+                    </p>
+                </div>
+
+                <div class="status">
+                    <p><span class="label">Статус:</span>
+                        <span class="js-status status">Все хорошо</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="block">
+                <div><span class="label">История:</span></div>
+                <div class="js-history"></div>
+            </div>
+        </div>
+        <button class="js-btn-reset_expenses btn-reset_expenses">Сбросить расходы</button>
+
+    </div>
+    </div>
+
 
 </body>
+<script src="index.js"></script>
+<script src="popup.js"></script>
+<script src="category.js"></script>
 
 </html>

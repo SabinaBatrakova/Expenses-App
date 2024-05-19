@@ -1,0 +1,127 @@
+body {
+    margin-top: 50px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    color: rgb(33, 126, 129);
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.label {
+    color: rgb(33, 126, 129);
+    font-weight: 600;
+}
+
+.expanses-wrapper {
+    width: 599px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 28px;
+    row-gap: 20px;
+}
+
+.block {
+    width: 219px;
+}
+
+.money-input {
+    display: flex;
+    border: 1px solid black;
+    padding: 5px 5px;
+    border-radius: 20px;
+}
+
+.expenses-input {
+    border: none;
+}
+
+.expenses-input:focus-visible,
+.type_category-input:focus-visible {
+    outline: none;
+}
+
+.rub:after {
+    content: " руб.";
+}
+
+.expenses-button,
+.btn-reset_expenses {
+    width: 150px;
+    height: 31px;
+    background-color: rgb(33, 126, 129);
+    color: white;
+    border-radius: 60px;
+    border: none;
+}
+
+.btn-reset_expenses {
+    background-color: rgb(227, 161, 48);
+    width: 215px;
+}
+
+.expenses-button:hover,
+.btn-reset_expenses:hover {
+    opacity: 80%;
+}
+
+.category-list {
+    width: 219px;
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 5px 5px;
+    border-radius: 20px;
+}
+
+.limit {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.sum,
+.status {
+    margin-bottom: 10px;
+}
+
+.limit:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -7px;
+    right: 55px;
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("icon.png");
+}
+
+.limit:hover {
+    opacity: 50%;
+}
+
+.order__title {
+    margin-bottom: 10px;
+}
+
+.input-limit {
+    margin-bottom: 20px;
+}
+
+.status {
+    color: green;
+}
+
+.status_red {
+    color: brown;
+}
