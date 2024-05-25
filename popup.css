@@ -44,6 +44,29 @@
     background-repeat: no-repeat;
 }
 
+
+
+.btn-limit {
+    background-color: rgb(33, 126, 129);
+    color: white;
+    border-radius: 20px;
+    width: 168px;
+    height: 30px;
+    border: none;
+}
+
+
 .body_fixed {
     overflow: hidden;
+}
+
+@media (max-width:750px) {
+    .popup {
+        width: 60%;
+    }
+
+    .popup__close-btn {
+        width: 15px;
+        height: 15px;
+    }
 }
