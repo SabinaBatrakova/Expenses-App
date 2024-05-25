@@ -58,7 +58,7 @@ function trackExpanse(expanse, category) {                                 //2. 
 
 function getExpanseFromUser() {                                 //1. Получаем значение из поля ввода
     if (!inputNode.value ) {
-        alert('Не заданна сумма')
+        alert('Не задана сумма')
      return null;                                               /* если строка пустая то верни, если нет то ниже код выполни  */ 
     }
     const expanse = parseInt(inputNode.value);
@@ -67,7 +67,7 @@ function getExpanseFromUser() {                                 //1. Получ�
 }
 function getCategoryFromUser() {
         if (categorySelect.value === "Категория") {
-            alert('Не заданна категория')
+            alert('Не задана категория')
         return null;
     }
     const category = categorySelect.value;
