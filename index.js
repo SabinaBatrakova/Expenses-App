@@ -28,7 +28,7 @@ init(expanses);
 buttonNode.addEventListener('click', function() {
     const expanse = getExpanseFromUser(); 
     const category = getCategoryFromUser();                      //получаю расход от пользователя
-    if(!expanse || !category) {                                                //проверка на наличие расхода, если нет то ничего не делаем
+    if(!expanse || !category) {                                              //проверка на наличие расхода, если нет то ничего не делаем
     return;
 }
     trackExpanse(expanse, category);                                        //трекаем затраты и категрию
@@ -42,6 +42,7 @@ buttonLimit.addEventListener('click', function () {
         limitNode.innerHTML = LIMIT;
         render(expanses);
         togglePopup();
+        localStorage.setItem('limit', newLimit)
     }
 })
 
@@ -57,6 +58,7 @@ function trackExpanse(expanse, category) {                                 //2. 
 
 function getExpanseFromUser() {                                 //1. Получаем значение из поля ввода
     if (!inputNode.value ) {
+        alert('Не заданна сумма')
      return null;                                               /* если строка пустая то верни, если нет то ниже код выполни  */ 
     }
     const expanse = parseInt(inputNode.value);
@@ -64,13 +66,14 @@ function getExpanseFromUser() {                                 //1. Получ�
     return expanse;
 }
 function getCategoryFromUser() {
-    if (!categorySelect.value) {
+        if (categorySelect.value === "Категория") {
+            alert('Не заданна категория')
         return null;
     }
-
     const category = categorySelect.value;
     clearCategory();
     return category;
+    
 }
 
 function clearCategory() {
@@ -130,6 +133,7 @@ function renderStatus(sum) {                                // 5. Сравнен
 
 function getLimitFromUser() {
     if (!limitInput.value){
+        alert('Не задан лимит')
     return null;
 }
     const newLimit = parseInt(limitInput.value);
